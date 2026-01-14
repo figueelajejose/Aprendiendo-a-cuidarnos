@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego | Lógica computacional</title>
+
+    <link rel="icon" href="../images/image.png" />
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="stylesheet" href="../css/juego.css" />
+  </head>
+
+  <body>
+    <header class="topbar neon">
+      <a href="../home.html" class="brand">
+        <img src="../images/image.png" class="logo" />
+        <span>Introducción a la programación UEFDS</span>
+      </a>
+      <nav class="menu">
+        <a href="../home.html">Inicio</a>
+        <a href="./conceptos.html">Conceptos</a>
+        <a href="./juego.html" class="active">Juego</a>
+        <a href="./glosario.html">Glosario</a>
+        <a href="./recursos.html">Recursos</a>
+      </nav>
+    </header>
+
+    <section class="banner juego">
+      <div class="banner-text">
+        <h1>Juego interactivo</h1>
+        <p>Selecciona el nivel de dificultad que deseas jugar.</p>
+
+        <div class="level-select">
+          <button class="btn" data-level="basico">Básico</button>
+          <button class="btn" data-level="intermedio">Intermedio</button>
+          <button class="btn" data-level="avanzado">Avanzado</button>
+          <button class="btn" data-level="experto">Experto</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="content">
+      <section class="panel iframe-refuerzo" id="iframeRefuerzo">
+        <h2>🎮 Juego de refuerzo</h2>
+        <iframe
+          src="https://www.educaplay.com/game/27343926-peligros_en_la_escuela_y_apoyo_familiar.html"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section class="panel game hidden" id="game">
+        <div class="hud">
+          <span><strong>Nivel:</strong> <span id="nivel">-</span></span>
+          <span><strong>Puntos:</strong> <span id="puntos">0</span></span>
+          <span><strong>Errores:</strong> <span id="errores">0</span></span>
+        </div>
+
+        <div class="scene glow" id="scene"></div>
+        <div class="choices" id="choices"></div>
+        <div class="feedback" id="feedback"></div>
+
+        <div class="controls">
+          <button class="btn secondary" id="btnNext">Siguiente</button>
+          <button class="btn secondary" id="btnReset">Reiniciar</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer neon">
+      <small>UEF Dolores Sucre • 2025-2026 • Proyecto de grado Informática</small>
+    </footer>
+
+    <script src="../js/juego.js"></script>
+  </body>
+</html>
