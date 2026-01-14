@@ -5,8 +5,8 @@
   saludoEl.textContent = `¡Hola, ${safeName}! Bienvenido/a`;
 
   setTimeout(() => {
-    const url = new URL(location.origin + "/home.html");
-    url.searchParams.set("nombre", safeName);
-    location.href = url.toString();
+  const url = new URL("home.html", window.location.href);
+  url.searchParams.set("nombre", safeName);
+  window.location.href = url.toString();
   }, 5000);
 })();
